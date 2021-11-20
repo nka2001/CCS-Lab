@@ -22,6 +22,30 @@ Find the number of entries which are not divisible by 7 in the first one billion
 * 
  */
 public class Problem03 {
+    
+    public Problem03(){
+        
+    }
+    
+    public void doStuff(int r){
+        int numEntries = 0;
+        
+        for(int i = 0; i < r; i++){
+            long k = 1;
+            
+            
+            for(int j = 0; j <= i; j++){
+                System.out.print(k + " ");
+                k = k * (i - j) / (j + 1);
+                
+                if(k % 7 != 0){
+                    numEntries++;
+                }
+            }
+            System.out.println();
+        }
+        System.out.println("The number of entires not divisble by 7 are: " + numEntries);
+    }
 
     
     }
